@@ -25,4 +25,4 @@ var slogan2 = (function (originalslogan) {
 				}
 	  	}
 return slogan2;
-})(slogan1);
+})(slogan);

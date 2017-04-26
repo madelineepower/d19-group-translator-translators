@@ -11,12 +11,11 @@ translate.addEventListener('click', function() {
 		}
 	}
 	if (selected == 1) {
-		console.log("one");
+		slogan.translateToSpanish(wordValue);
 	} else if (selected == 2) {
 		slogan.translateToFrench(wordValue);
-		console.log("two");
 	} else if (selected == 3) {
-		console.log("three");
+		slogan.translateToItalian(wordValue);
 	} else if (selected == 4) {
 		slogan.translateToUzbek(wordValue);
 	}
