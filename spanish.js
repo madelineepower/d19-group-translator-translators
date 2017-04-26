@@ -23,5 +23,5 @@ var slogan3 = (function (originalslogan) {
             }
         }
       }
-  return slogan2;
-})(slogan);
+  return slogan3;
+})(slogan2);
