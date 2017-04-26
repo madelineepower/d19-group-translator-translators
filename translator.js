@@ -1,7 +1,8 @@
 let translate = document.getElementById('translate');
+let play = document.getElementById('play');
 translate.addEventListener('click', function() {
 	let wordValue = document.getElementById('value').value;
-	//which side
+	//which sidep
 	var selected;
 	var radios = document.getElementsByName('spanish');
 	for(var i = 0; i < radios.length; i++) {
@@ -27,24 +28,22 @@ clear.addEventListener('click', () => {
 	textArea.innerHTML = " ";
 });
 
-onload = function() {
-    if ('speechSynthesis' in window) with(speechSynthesis) {
-
-
-        var playEle = document.querySelector('#play');
-        var flag = false;
-        playEle.addEventListener('click', onClickPlay);
-
-        function onClickPlay() {
-            if(!flag){
-                flag = true;
-                utterance = new SpeechSynthesisUtterance(document.querySelector('#output').textContent);
-                };
-                playEle.className = 'played';
-                speak(utterance);
-            }
-        } else { /* speech synthesis not supported */
-          console.log("speech synthesis not supported in this window");
-    }
-
-  };
+play.addEventListener("click", function(){
+					var selected;
+					var radios = document.getElementsByName('spanish');
+					for(var i = 0; i < radios.length; i++) {
+						if (radios[i].checked) {
+							selected = radios[i].value;
+							break;
+						}
+					}
+					if (selected == 1) {
+						responsiveVoice.speak(document.querySelector('#output').textContent, "Spanish Female");
+					} else if (selected == 2) {
+						responsiveVoice.speak(document.querySelector('#output').textContent, "French Female");
+					} else if (selected == 3) {
+						responsiveVoice.speak(document.querySelector('#output').textContent, "Italian Female");
+					} else if (selected == 4) {
+						responsiveVoice.speak(document.querySelector('#output').textContent, "Turkish Female");
+					}
+});
