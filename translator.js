@@ -20,3 +20,9 @@ translate.addEventListener('click', function() {
 		slogan.translateToUzbek(wordValue);
 	}
 });
+
+var clear = document.getElementById('clear');
+clear.addEventListener('click', () => {
+	var textArea = document.getElementById('output');
+	textArea.innerHTML = " ";
+});

@@ -13,7 +13,7 @@ var slogan2 = (function (originalslogan) {
 				for (var i in keyNames) {
 				    if (typeof lookup[keyNames[i]] != 'undefined') {
 				    	if (keyNames[i] === "make") {
-				    		uzbOutput.innerHTML += `<h1>${italWords.make}</h1>`;
+				    		uzbOutput.innerHTML += `<br><h1>${italWords.make}</h1>`;
 				    	} else if (keyNames[i] === "again") {
 				    		uzbOutput.innerHTML += `<h1>${italWords.again}</h1>`;
 				    	} else if (keyNames[i] === "great") {
