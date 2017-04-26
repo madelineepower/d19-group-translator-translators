@@ -12,7 +12,7 @@ var slogan = (function () {
 				for (var i in keyNames) {
 				    if (typeof lookup[keyNames[i]] != 'undefined') {
 				    	if (keyNames[i] === "make") {
-				    		uzbOutput.innerHTML += `<h1>${lexicon.make}</h1>`;
+				    		uzbOutput.innerHTML += `<br><h1>${lexicon.make}</h1>`;
 				    	} else if (keyNames[i] === "christmas") {
 				    		uzbOutput.innerHTML += `<h1>${lexicon.christmas}</h1>`;
 				    	} else if (keyNames[i] === "great") {
