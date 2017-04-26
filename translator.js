@@ -13,6 +13,7 @@ translate.addEventListener('click', function() {
 	if (selected == 1) {
 		console.log("one");
 	} else if (selected == 2) {
+		slogan.translateToFrench(wordValue);
 		console.log("two");
 	} else if (selected == 3) {
 		console.log("three");
@@ -20,9 +21,3 @@ translate.addEventListener('click', function() {
 		slogan.translateToUzbek(wordValue);
 	}
 });
-
-
-
-
-
-

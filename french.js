@@ -1,9 +1,11 @@
 var uzbOutput = document.getElementById('output');
-var slogan = (function () {
-	var lexicon = {"make":"Qilish", "christmas":"Bayramni", "great":"Katta", "again":"Yana"}
-	return {
-		translateToUzbek: function(value) {
-			var rev = value.split(" ");
+
+var slogan1 = (function (originalslogan) {
+	var lexicon = {"make":"Faire", "christmas":"du Noël", "great":"genial", "again":"encore"}
+
+    originalslogan.translateToFrench = function(value) {
+
+      var rev = value.split(" ");
 			var keyNames = Object.keys(lexicon);
 				var lookup = {};
 				for (var j in rev) {
@@ -23,6 +25,5 @@ var slogan = (function () {
 				    }
 				}
 	  	}
-	}
-	return slogan;
-})();
+  return slogan1;
+})(slogan);
