@@ -26,3 +26,25 @@ clear.addEventListener('click', () => {
 	var textArea = document.getElementById('output');
 	textArea.innerHTML = " ";
 });
+
+onload = function() {
+    if ('speechSynthesis' in window) with(speechSynthesis) {
+
+
+        var playEle = document.querySelector('#play');
+        var flag = false;
+        playEle.addEventListener('click', onClickPlay);
+
+        function onClickPlay() {
+            if(!flag){
+                flag = true;
+                utterance = new SpeechSynthesisUtterance(document.querySelector('#output').textContent);
+                };
+                playEle.className = 'played';
+                speak(utterance);
+            }
+        } else { /* speech synthesis not supported */
+          console.log("speech synthesis not supported in this window");
+    }
+
+  };
